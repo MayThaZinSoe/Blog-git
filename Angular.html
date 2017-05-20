@@ -1,0 +1,21 @@
+<html>
+<head><title>Angular test</title></head>
+<body>
+<h1>This is Angular test.</h1>
+<br>
+<div ng-app="test" ng-controller="testCtr">
+    <h1>{{iAmTitle}}</h1>
+    <div>
+        <h3>Edit the Title<input ng-model="iAmTitle"/></h3>
+    </div>
+</div>
+</body>
+<script src="js/jQuery.js"></script>
+<script src="js/AngularJS.js"></script>
+<script>
+    var app = angular.module('test', []);
+    app.controller('testCtr', function($scope) {
+        $scope.iAmTitle = "Hellow World";
+    });
+</script>
+</html>
